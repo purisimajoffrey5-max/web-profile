@@ -1,92 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joffrey T. Purisima | Web Developer</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Joffrey T. Purisima — Web Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=SF+Mono:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="animations.css" />
   <script defer src="script.js"></script>
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Add mouse trail effect -->
+  <canvas id="canvas"></canvas>
+  
+  <!-- Loading screen -->
+  <div id="loading-screen">
+    <div class="loader"></div>
+  </div>
 </head>
 <body>
-  <header>
-    <div class="profile-header">
-      <img src="1698375462650.jpg" alt="Joffrey" class="profile-img">
-      <h1>Joffrey T. Purisima</h1>
-      <h3>Web Developer</h3>
-      <p class="tagline">"Building creative, responsive, and user-friendly web experiences."</p>
-    </div>
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+  
+  <!-- NAV -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#home">Joffrey<span class="dot">.</span></a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="about">
-    <h2>About Me</h2>
-    <p>
-      Hello! I'm Joffrey, a passionate web developer from Cagayan.
-      I love designing and developing beautiful, responsive, and functional websites using modern web technologies.
-      My goal is to create digital solutions that make life easier and more connected.
-    </p>
-  </section>
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <p class="subtitle animate-fade-up delay-1">Hi, my name is</p>
+          <h1 class="title animate-fade-up delay-2">Joffrey T. Purisima  <span class="name">  Web Developer</span></h1>
+          <div class="typewriter-container animate-fade-up delay-3">
+            <p class="lead">
+              I'm a web developer specializing in building exceptional digital experiences. Currently, I'm focused on building accessible, 
+              human-centered products at <span id="typed" class="highlight"></span>
+            </p>
+          </div>
+          <div class="hero-cta animate-fade-up delay-4">
+            <a class="btn primary hover-lift" href="#projects">
+              <span>Check out my work</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a class="btn outline hover-lift" href="mailto:purisimajoffrey5@gmail.com">
+              <span>Get in touch</span>
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+          <div class="social-inline animate-fade-up delay-5">
+            <a href="https://github.com/jepscode" target="_blank" rel="noopener" class="social-link hover-grow">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link hover-grow">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61576724070114" target="_blank" rel="noopener" class="social-link hover-grow">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="mailto:purisimajoffrey5@gmail.com" class="social-link hover-grow">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
 
-  <section class="skills">
-    <h2>Skills</h2>
-    <ul id="skill-list"></ul>
-  </section>
+        <div class="hero-right reveal">
+          <div class="profile-card">
+            <img src="1698375462650.jpg" alt="Joffrey" class="profile-photo" />
+            <div class="profile-info">
+              <h3>Joffrey T. Purisima</h3>
+              <p>Full Stack Developer</p>
+              <div class="profile-stats">
+                <div><strong>12+</strong><span>Projects</span></div>
+                <div><strong>2+</strong><span>Years</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section class="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <h3>💬 Chatbot System</h3>
-      <p>A simple system designed to assist with mental health awareness using an AI chatbot.</p>
+    <!-- ABOUT -->
+    <section id="about" class="section container reveal">
+      <h2><i class="fas fa-user"></i> About Me</h2>
+      <div class="about-grid">
+        <div class="about-content">
+          <p class="about-intro">
+            Hello! I'm Joffrey, a passionate web developer based in Cagayan who enjoys building things that live on the internet.
+          </p>
+          <p>
+            My journey in web development started back in 2021 when I decided to try editing custom Tumblr themes — turns out hacking together 
+            a custom reblog button taught me a lot about HTML & CSS!
+          </p>
+          <p>
+            Fast-forward to today, and I've had the privilege of working at various projects, from small business websites to complex web applications. 
+            My main focus these days is building accessible, inclusive products and digital experiences.
+          </p>
+          <p>
+            Here are a few technologies I've been working with recently:
+          </p>
+          <ul class="tech-list">
+            <li>JavaScript (ES6+)</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>PHP</li>
+            <li>WordPress</li>
+            <li>Firebase</li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <img src="1698375462650.jpg" alt="Joffrey working" class="about-photo" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section dark-bg reveal">
+      <div class="container">
+        <h2>What I Do</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>🖥️ Web Development</h3>
+            <p>Design and build responsive websites using modern frameworks, ensuring high performance and clean UI/UX.</p>
+          </div>
+          <div class="service-card">
+            <h3>🎨 UI/UX Design</h3>
+            <p>Transform ideas into intuitive digital experiences with attention to usability, accessibility, and consistency.</p>
+          </div>
+          <div class="service-card">
+            <h3>⚙️ Backend Integration</h3>
+            <p>Connect APIs, handle data efficiently, and ensure seamless client-server communication using Node.js and Express.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section container reveal">
+      <h2><i class="fas fa-code"></i> Technologies I Work With</h2>
+      <div class="skills-categories">
+        <div class="skill-category">
+          <h3>Frontend</h3>
+          <ul class="skills-grid">
+            <li><i class="fab fa-html5"></i> HTML5</li>
+            <li><i class="fab fa-css3-alt"></i> CSS3</li>
+            <li><i class="fab fa-js"></i> JavaScript</li>
+            <li><i class="fab fa-react"></i> React.js</li>
+            <li><i class="fab fa-sass"></i> Sass</li>
+            <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Backend</h3>
+          <ul class="skills-grid">
+            <li><i class="fab fa-node-js"></i> Node.js</li>
+            <li><i class="fab fa-php"></i> PHP</li>
+            <li><i class="fas fa-database"></i> MySQL</li>
+            <li><i class="fas fa-server"></i> Express.js</li>
+            <li><i class="fab fa-python"></i> Python</li>
+            <li><i class="fas fa-database"></i> MongoDB</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Tools & Others</h3>
+          <ul class="skills-grid">
+            <li><i class="fab fa-git-alt"></i> Git</li>
+            <li><i class="fab fa-github"></i> GitHub</li>
+            <li><i class="fab fa-docker"></i> Docker</li>
+            <li><i class="fab fa-aws"></i> AWS</li>
+            <li><i class="fab fa-figma"></i> Figma</li>
+            <li><i class="fas fa-mobile-alt"></i> Responsive Design</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section dark-bg reveal">
+      <div class="container">
+        <h2>Experience & Education</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="year">2024 – Present</span>
+            <h3>Freelance Web Developer</h3>
+            <p>Developed websites for local businesses and startups, focusing on responsive design, SEO, and accessibility.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="year">2022 – 2024</span>
+            <h3>Bachelor of Science in Information Technology</h3>
+            <p>Cagayan State University — Specialized in web development and software engineering.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="year">2021</span>
+            <h3>Frontend Development Certificate</h3>
+            <p>Completed online certifications in HTML, CSS, and JavaScript from freeCodeCamp and Coursera.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container reveal">
+      <h2><i class="fas fa-code-branch"></i> Some Things I've Built</h2>
+      <div class="featured-projects">
+        <!-- Will be populated by JavaScript -->
+        <div id="projects-grid" class="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section dark-bg container reveal">
+      <h2>Contact</h2>
+      <p>Interested in working together or discussing a project idea? Reach out and let’s create something amazing.</p>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" rows="5" placeholder="Your message"></textarea>
+        <button type="submit" class="btn primary">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Joffrey T. Purisima — Designed with ❤️ and JavaScript</small>
     </div>
-    <div class="project-card">
-      <h3>🌐 Simple Web Profile</h3>
-      <p>A personal portfolio website showcasing my skills, projects, and contact information.</p>
-    </div>
-    <div class="project-card">
-      <h3>🛍️ E-Commerce Landing Page</h3>
-      <p>An interactive product showcase built with HTML, CSS, and JavaScript animations.</p>
-    </div>
-  </section>
-
-  <section class="languages">
-    <h2>Languages</h2>
-    <div class="lang-bar">
-      <span>English</span>
-      <div class="bar"><div class="fill" style="width:80%"></div></div>
-    </div>
-    <div class="lang-bar">
-      <span>Filipino</span>
-      <div class="bar"><div class="fill" style="width:95%"></div></div>
-    </div>
-  </section>
-
-  <section class="testimonials">
-    <h2>Testimonials</h2>
-    <blockquote>
-      “An exceptional developer with great attention to detail and creativity.” 
-      <footer>- John Smith, Project Manager</footer>
-    </blockquote>
-  </section>
-
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <div class="socials">
-      <a href="https://github.com/jepscode" target="_blank">🐙 GitHub</a>
-      <a href="https://www.facebook.com/profile.php?id=61576724070114" target="_blank">📘 Facebook</a>
-      <a href="https://linkedin.com" target="_blank">💼 LinkedIn</a>
-      <a href="https://twitter.com" target="_blank">🐦 Twitter</a>
-      <a href="mailto:purisimajoffrey5@gmail.com">✉️ Email</a>
-    </div>
-
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2025 Joffrey T. Purisima | Designed with ❤️ and JavaScript</p>
   </footer>
 </body>
 </html>

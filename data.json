@@ -1,12 +1,50 @@
 {
   "skills": [
     "HTML5",
-    "CSS3",
+    "CSS3 / Tailwind",
     "JavaScript (ES6+)",
-    "ReactJS",
-    "Node.js",
+    "React.js",
+    "Node.js / Express",
+    "REST APIs",
     "Git & GitHub",
     "Responsive Design",
-    "UI/UX Design"
+    "UI/UX Design",
+    "Figma",
+    "Firebase",
+    "SEO Optimization"
+  ],
+  "projects": [
+    {
+      "title": "AI Mental Health Companion",
+      "description": "A mental health awareness chatbot that provides support and resources through natural language processing. Features include mood tracking, guided meditation, and emergency resource connection.",
+      "tech": ["React", "Node.js", "OpenAI API", "MongoDB"],
+      "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800",
+      "github": "https://github.com/jepscode/ai-mental-health",
+      "url": "#"
+    },
+    {
+      "title": "Modern Portfolio",
+      "description": "A responsive portfolio website with dark mode, smooth animations, and dynamic content loading. Implements modern CSS features and JavaScript best practices.",
+      "tech": ["HTML5", "CSS3", "JavaScript", "GSAP"],
+      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800",
+      "github": "https://github.com/jepscode/portfolio",
+      "url": "#"
+    },
+    {
+      "title": "E-Commerce Platform",
+      "description": "Full-featured e-commerce solution with product catalog, shopping cart, and secure checkout. Includes admin dashboard for inventory management.",
+      "tech": ["React", "Node.js", "MongoDB", "Stripe"],
+      "image": "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=800",
+      "github": "https://github.com/jepscode/ecommerce",
+      "url": "#"
+    },
+    {
+      "title": "Analytics Dashboard",
+      "description": "Real-time analytics dashboard with interactive charts and data visualization. Features customizable widgets and export capabilities.",
+      "tech": ["React", "D3.js", "Firebase", "Material-UI"],
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800",
+      "github": "https://github.com/jepscode/analytics-dashboard",
+      "url": "#"
+    }
   ]
 }
